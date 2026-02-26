@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProQuiz - Master Your Tech Skills</title>
+    <!-- Modern modern font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">ProQuiz<span>.</span></div>
+            <div id="user-profile" class="user-profile hidden">
+                <span id="username-display"></span>
+                <button id="logout-btn" class="btn-text">Logout</button>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- 1. Authentication Section -->
+            <section id="auth-section" class="section glass-card active">
+                <div class="auth-tabs">
+                    <button class="tab-btn active" data-tab="login">Login</button>
+                    <button class="tab-btn" data-tab="register">Register</button>
+                </div>
+                
+                <form id="login-form" class="auth-form active">
+                    <h2>Welcome Back</h2>
+                    <p class="subtitle">Enter your credentials to continue</p>
+                    <div class="input-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" required placeholder="you@example.com">
+                    </div>
+                    <div class="input-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" required placeholder="••••••••">
+                    </div>
+                    <button type="submit" class="btn-primary w-100">Login</button>
+                    <p id="login-error" class="error-msg"></p>
+                </form>
+
+                <form id="register-form" class="auth-form hidden">
+                    <h2>Create Account</h2>
+                    <p class="subtitle">Start your learning journey today</p>
+                    <div class="input-group">
+                        <label for="reg-name">Full Name</label>
+                        <input type="text" id="reg-name" required placeholder="John Doe">
+                    </div>
+                    <div class="input-group">
+                        <label for="reg-email">Email</label>
+                        <input type="email" id="reg-email" required placeholder="you@example.com">
+                    </div>
+                    <div class="input-group">
+                        <label for="reg-password">Password</label>
+                        <input type="password" id="reg-password" required placeholder="••••••••">
+                    </div>
+                    <button type="submit" class="btn-primary w-100">Register</button>
+                    <p id="reg-error" class="error-msg"></p>
+                </form>
+            </section>
+
+            <!-- 2. Dashboard Section -->
+            <section id="dashboard-section" class="section hidden">
+                <div class="dashboard-header">
+                    <h2>Select a Domain</h2>
+                    <p class="subtitle">Choose a topic to test your knowledge</p>
+                </div>
+                <div class="domain-grid" id="domain-grid">
+                    <!-- Domain cards injected by JS -->
+                </div>
+                
+                <div class="recent-scores glass-card mt-2">
+                    <h3>Recent Scores</h3>
+                    <div id="history-list" class="history-list">
+                        <!-- History injected by JS -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. Quiz Section -->
+            <section id="quiz-section" class="section glass-card hidden">
+                <div class="quiz-header">
+                    <div class="quiz-progress">
+                        <span id="current-question-num">1</span> / <span id="total-questions-num">10</span>
+                    </div>
+                    <div class="timer">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        <span id="time-left">00:30</span>
+                    </div>
+                </div>
+                <div class="progress-bar-container">
+                    <div id="progress-bar" class="progress-bar"></div>
+                </div>
+                
+                <div class="question-container">
+                    <h3 id="question-text">Loading question...</h3>
+                    <div id="options-container" class="options-grid">
+                        <!-- Options injected by JS -->
+                    </div>
+                </div>
+                
+                <div class="quiz-footer">
+                    <div id="feedback-msg" class="feedback-msg"></div>
+                    <button id="next-btn" class="btn-primary" disabled>Next Question <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+                </div>
+            </section>
+
+            <!-- 4. Result Section -->
+            <section id="result-section" class="section glass-card hidden">
+                <div class="result-header">
+                    <h2 id="result-status">Quiz Completed!</h2>
+                    <div class="score-circle">
+                        <svg viewBox="0 0 36 36" class="circular-chart">
+                            <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            <path id="score-circle-path" class="circle" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+                            <text id="score-percentage" x="18" y="20.35" class="percentage">0%</text>
+                        </svg>
+                    </div>
+                    <p id="total-score-text" class="total-score">You scored X out of Y</p>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-box correct">
+                        <span class="stat-label">Correct</span>
+                        <span id="correct-count" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-box wrong">
+                        <span class="stat-label">Wrong</span>
+                        <span id="wrong-count" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-box time">
+                        <span class="stat-label">Avg Time</span>
+                        <span id="avg-time" class="stat-value">0s</span>
+                    </div>
+                </div>
+                
+                <div class="suggestion-box mt-2">
+                    <h3>Feedback</h3>
+                    <p id="improvement-suggestion">Great job!</p>
+                </div>
+                
+                <div class="result-actions mt-2">
+                    <button id="retry-btn" class="btn-outline">Try Again</button>
+                    <button id="home-btn" class="btn-primary">Back to Dashboard</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
