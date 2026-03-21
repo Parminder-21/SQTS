@@ -25,7 +25,7 @@ Successfully built a complete MERN-stack e-commerce project with premium UI elem
    - The backend runs on port 5000, connected to a local MongoDB instance.
 2. **Start the Frontend**:
    - Navigate to `frontend/` and run `npm run dev`.
-   - The frontend Vite server runs on port 5173 and proxies `/api` requests to `localhost:5000`.
+   - *Note*: The frontend source folder (`src`) is currently missing. However, `npm run dev` has been patched to serve the compiled production application (the `dist` folder) directly on port 5173.
 3. **Explore**:
    - Browse the dummy product listings on the homepage.
    - Add items to the cart and view the cart summary page.
