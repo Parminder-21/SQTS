@@ -2,7 +2,7 @@
 
 **🌐 Live Portfolio Demo: [https://parminder-21.github.io/SQTS/](https://parminder-21.github.io/SQTS/)**
 
-This repository showcases the progression of projects built during my **Web Development Internship at Spark Que Tech Solutions (SQTS)**. It highlights my journey from learning frontend fundamentals to building dynamic, interactive web applications.**.
+This repository showcases the progression of projects built during my **Web Development Internship at Spark Que Tech Solutions (SQTS)**. It highlights my journey from learning frontend fundamentals to building dynamic, interactive web applications.
 
 ---
 
@@ -74,8 +74,8 @@ https://github.com/Parminder-21/SQTS
 ---
 
 ## 📬 Connect With Me
-- LinkedIn: (Add your link)
-- GitHub: https://github.com/Parminder-21
+- **LinkedIn:** [linkedin.com/in/parminder-21](https://www.linkedin.com/in/parminder-21/) *(Update if needed)*
+- **GitHub:** [Parminder-21](https://github.com/Parminder-21)
 
 ---
 
