@@ -68,7 +68,7 @@ A real-world inspired shopping website with complete MERN stack architecture.
 ---
 
 ## 🔗 GitHub Repository
-https://github.com/Parminder-21/SQTS-internship-project-Task-3
+https://github.com/Parminder-21/SQTS
 
 ---
 
