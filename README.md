@@ -75,7 +75,7 @@ https://github.com/Parminder-21/SQTS
 
 ## 📬 Connect With Me
 - **LinkedIn:** [linkedin.com/in/parminder-singh-malhotra](https://www.linkedin.com/in/parminder-singh-malhotra)
-- **GitHub:** [Parminder-21](https://github.com/Parminder-singh-malhotra)
+- **GitHub:** [Parminder-21](https://github.com/Parminder-21))
 
 ---
 
