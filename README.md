@@ -63,19 +63,6 @@ A real-world inspired shopping website with complete MERN stack architecture.
 
 ---
 
-## 📸 Screenshots
-
-### Level 1 – Café Website
-![Cafe Website Screenshot](Level-1-Cafe-Website/images/screenshots/home.png)
-
-### Level 2 – Quiz Application
-![Quiz App Screenshot](Level-2-Quiz-App/images/screenshots/quiz.png)
-
-### Level 3 – E-Commerce Website
-*(Full-stack project: Screenshot to be added after running locally)*
-
----
-
 ## 🔗 GitHub Repository
 https://github.com/Parminder-21/SQTS
 
