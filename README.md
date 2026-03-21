@@ -1,7 +1,8 @@
-# 🚀 Web Development Internship Projects – SQTS
+# 🚀 Web Development Portfolio – SQTS Internship
 
-This repository contains all the projects completed during my **Web Development Internship at Spark Que Tech Solutions (SQTS)**.  
-It showcases my journey from **frontend fundamentals to building real-world applications**.
+**🌐 Live Portfolio Demo: [https://parminder-21.github.io/SQTS/](https://parminder-21.github.io/SQTS/)**
+
+This repository showcases the progression of projects built during my **Web Development Internship at Spark Que Tech Solutions (SQTS)**. It highlights my journey from learning frontend fundamentals to building dynamic, interactive web applications.**.
 
 ---
 
